@@ -1,0 +1,46 @@
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".*\\.test\\.js$",
+    "collectCoverageFrom": [
+      "**/*.(t|j)s",
+      "controllers/*.js",
+      "config/*.js",
+      "models/*.js",
+      "!index.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/seeders/",
+      "/migrations/",
+      "/coverage/"
+    ],
+    "reporters": [
+      "default",
+      "jest-sonar"
+    ],
+    "coverageReporters": [
+      "cobertura",
+      "text",
+      "lcov"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>"
+    ],
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportFile": "sonar-test-report.xml",
+    "indent": 4
+  },
+  "jestTestResultProcessors": [
+    "jest-junit-reporter",
+    "jest-sonar-reporter"
+  ]
+}

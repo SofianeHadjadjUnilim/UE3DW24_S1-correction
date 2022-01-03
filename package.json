@@ -1,0 +1,95 @@
+{
+  "name": "backlim",
+  "version": "1.0.0",
+  "description": "Backend API unilim",
+  "main": "index.js",
+  "scripts": {
+    "start:prod": "NODE_ENV=production node index.js",
+    "start": "NODE_ENV=development nodemon index.js",
+    "test": "jest",
+    "test:cov": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofianeHadjadjUnilim/UE3DW24_S1.git"
+  },
+  "keywords": [
+    "nodejs",
+    "backend",
+    "api",
+    "UE3DW24"
+  ],
+  "author": "Sofiane Hadjadj",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/SofianeHadjadjUnilim/UE3DW24_S1/issues"
+  },
+  "homepage": "https://github.com/SofianeHadjadjUnilim/UE3DW24_S1#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.12.0-alpha.1",
+    "sequelize-cli": "^6.3.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.3",
+    "jest-json-schema": "^6.0.0",
+    "jest-junit-reporter": "^1.1.0",
+    "jest-sonar": "^0.2.12",
+    "jest-sonar-reporter": "^2.0.0",
+    "nodemon": "^2.0.15",
+    "sonarqube-scanner": "^2.8.1",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".*\\.test\\.js$",
+    "collectCoverageFrom": [
+      "**/*.(t|j)s",
+      "controllers/*.js",
+      "config/*.js",
+      "models/*.js",
+      "!index.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/seeders/",
+      "/migrations/",
+      "/coverage/"
+    ],
+    "reporters": [
+      "default",
+      "jest-sonar"
+    ],
+    "coverageReporters": [
+      "cobertura",
+      "text",
+      "lcov"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>"
+    ],
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportFile": "sonar-test-report.xml",
+    "indent": 4
+  },
+  "jestTestResultProcessors": [
+    "jest-junit-reporter",
+    "jest-sonar-reporter"
+  ]
+}

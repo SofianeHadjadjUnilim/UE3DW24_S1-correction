@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="/home/vagrant/projects/UE3DW24_S1/tests/user.test.js">
+        <testCase name="Test : Get all users * Json response - status : 200" duration="187"/>
+        <testCase name="Test : Get one user * Json response - status : 200" duration="21"/>
+        <testCase name="Test : User not found * Json response - status : 404" duration="9"/>
+        <testCase name="Test : Create user * Json response - status : 201" duration="39"/>
+        <testCase name="Test : Cannot create user * Json response - status : 500" duration="4"/>
+        <testCase name="Test : Update user * Json response - status : 200" duration="17"/>
+        <testCase name="Test : Cannot update user * Json response - status : 500" duration="4"/>
+        <testCase name="Test : Delete user * Json response - status : 200" duration="13"/>
+        <testCase name="Test : Cannot delete user * Json response - status : 500" duration="10"/>
+        <testCase name="Test : User not found * Json response - status : 404" duration="6"/>
+    </file>
+</testExecutions>
