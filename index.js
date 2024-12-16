@@ -1,10 +1,15 @@
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
+
+const cors = require('cors');
 const express = require('express');
+
+dotenv.config();
+
 const app = express();
 const port = process.env.PORT;
 const apiRouter = require('./routes/apiRouter').router;
-const cors = require('cors');
+
 
 app.use(cors());
 
@@ -18,6 +23,10 @@ app.get('/', function (req, res) {
     res.status(200).send('<h1>ソフィアン <span>・</span> ハジャジ</h1>');
 });
 
-app.listen(port, () => {
-	console.log('Server listening on port : ' + port)
-});
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`Server listening on port : ${port}`);
+    });
+}
+
+module.exports = app;
